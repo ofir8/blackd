@@ -5,7 +5,7 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   // GitHub Pages base path - matches repository name
-  base: '/BlackDaimond/',
+  base: '/blackd/',
   server: {
     host: true,
     port: 5173,
