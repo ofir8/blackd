@@ -4,8 +4,8 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // GitHub Pages base path - matches repository name
-  base: '/blackd/',
+  // Base path - '/' for Vercel (change to '/blackd/' for GitHub Pages)
+  base: '/',
   server: {
     host: true,
     port: 5173,
