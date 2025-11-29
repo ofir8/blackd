@@ -89,7 +89,7 @@ const About = () => {
     >
       <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] lg:h-screen w-full">
         {/* Right Side - White Background with Content (50%) */}
-        <div className="bg-white text-black flex flex-col justify-center items-center p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 relative z-10 overflow-hidden lg:h-screen py-12 lg:py-0 w-full" style={{ boxShadow: '-2px 0 8px rgba(0, 0, 0, 0.08)' }}>
+        <div className="bg-white text-black flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 relative z-10 overflow-x-hidden lg:h-screen py-10 sm:py-12 lg:py-0 w-full" style={{ boxShadow: '-2px 0 8px rgba(0, 0, 0, 0.08)' }}>
           {/* White background slides in from right */}
       <div
             className={`absolute inset-0 bg-white transform transition-all duration-1000 ease-out ${
@@ -104,7 +104,7 @@ const About = () => {
           
           {/* Content appears after background */}
           <div 
-            className={`relative z-10 w-full max-w-sm sm:max-w-md md:max-w-lg transition-all duration-700 delay-300 ${
+            className={`relative z-10 w-full max-w-sm sm:max-w-md md:max-w-lg transition-all duration-700 delay-300 px-2 sm:px-0 ${
               isVisible 
                 ? 'opacity-100 translate-x-0' 
                 : 'opacity-0 translate-x-8'
@@ -123,28 +123,28 @@ const About = () => {
             </div>
 
             {/* Subtitle */}
-            <p className="text-sm sm:text-base md:text-lg text-black/70 mb-4 sm:mb-6 text-center font-light">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black/70 mb-4 sm:mb-6 text-center font-light">
               אירוח אקסלוסיבי בגליל
             </p>
 
             {/* Body Text - Centered, standard readable size */}
             <div className="space-y-2 sm:space-y-3 text-center">
-              <p className="text-sm sm:text-base md:text-lg text-black/90 leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black/90 leading-relaxed font-normal">
                 בלב החורש הגלילי,
               </p>
-              <p className="text-sm sm:text-base md:text-lg text-black/90 leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black/90 leading-relaxed font-normal">
                 בין עצים מרשרשים ושקט שמרגישים בגוף
               </p>
-              <p className="text-sm sm:text-base md:text-lg text-black/90 leading-relaxed font-normal mb-2 sm:mb-3">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black/90 leading-relaxed font-normal mb-2 sm:mb-3">
                 שוכן מתחם Black Diamond.
               </p>
-              <p className="text-sm sm:text-base md:text-lg text-black/90 leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black/90 leading-relaxed font-normal">
                 שתי יחידות אירוח שעוצבו בקפידה רבה,
               </p>
-              <p className="text-sm sm:text-base md:text-lg text-black/90 leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black/90 leading-relaxed font-normal">
                 המשלבות בין אלגנטיות מודרנית לחום כפרי.
               </p>
-              <p className="text-sm sm:text-base md:text-lg text-black/90 leading-relaxed font-normal mt-2 sm:mt-3">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-black/90 leading-relaxed font-normal mt-2 sm:mt-3">
                 עם הרבה שקט פסטורלי ואירוח חוויתי
               </p>
             </div>
@@ -152,7 +152,7 @@ const About = () => {
         </div>
 
         {/* Left Side - Split Background with Gallery (50%) */}
-        <div className="relative overflow-x-hidden lg:h-screen py-12 lg:py-0 w-full">
+        <div className="relative overflow-x-hidden lg:h-screen py-10 sm:py-12 lg:py-0 w-full">
           {/* Split Background: 50% black top with lighting effect, 50% white bottom */}
           <div className="absolute inset-0 w-full">
             <div className="absolute top-0 left-0 right-0 h-[50%] bg-black overflow-hidden w-full">
@@ -168,8 +168,8 @@ const About = () => {
           </div>
 
           {/* Single Image Carousel - Centered with Logo in corner - Takes full height */}
-          <div className="relative lg:h-full flex items-center justify-center p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 w-full" style={{ overflow: 'visible' }}>
-            <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl aspect-square" style={{ overflow: 'visible' }}>
+          <div className="relative lg:h-full flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 w-full overflow-x-hidden">
+            <div className="relative w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-xl xl:max-w-2xl aspect-square" style={{ overflow: 'visible' }}>
               {/* Images with fade transition - Enhanced clarity */}
             {features.map((feature, index) => (
                 <div

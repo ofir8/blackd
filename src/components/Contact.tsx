@@ -18,22 +18,22 @@ const Contact = () => {
       
       {/* White Banner Section - Full Width Edge to Edge */}
       <Reveal direction="fade-up" delay={0.1} width="100%">
-        <div className="w-screen bg-white py-12 md:py-16 relative z-10" style={{ marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight text-black">
+        <div className="w-full bg-white py-10 sm:py-12 md:py-16 relative z-10 overflow-x-hidden">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4 sm:mb-6 tracking-tight text-black">
             מוכנים <span className="text-gradient">לחוויה</span>?
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
-            <p className="text-xl md:text-2xl text-black/70 max-w-3xl mx-auto font-light leading-relaxed">
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6 sm:mb-8" />
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-black/70 max-w-3xl mx-auto font-light leading-relaxed px-2">
             צרו קשר עכשיו והזמינו את השהייה המושלמת שלכם
           </p>
           </div>
         </div>
       </Reveal>
 
-      <div className="section-padding container mx-auto relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+      <div className="section-padding container mx-auto relative z-10 overflow-x-hidden">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
             <Reveal direction="scale" delay={0.2} duration={0.6} width="100%">
             <a
                 href={`tel:${contactInfo.phoneLink}`}

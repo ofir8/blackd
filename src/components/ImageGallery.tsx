@@ -121,10 +121,10 @@ const ImageGallery = ({ type }: ImageGalleryProps = { type: undefined }) => {
   };
 
   return (
-    <section id="gallery" className="section-padding bg-background relative overflow-hidden">
+    <section id="gallery" className="section-padding bg-background relative overflow-x-hidden">
       <Reveal direction="fade-up" delay={0.1} width="100%">
-      <div className="container mx-auto px-4 mb-12 text-center">
-          <h2 className="text-3xl md:text-5xl font-light mb-6">
+      <div className="container mx-auto px-4 sm:px-6 mb-8 sm:mb-12 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-light mb-4 sm:mb-6">
             {type === "zimmer" ? (
               <>גלריית <span className="text-gradient">הצימר</span></>
             ) : type === "suite" ? (
@@ -133,17 +133,17 @@ const ImageGallery = ({ type }: ImageGalleryProps = { type: undefined }) => {
               <>גלריית <span className="text-gradient">התמונות</span></>
             )}
           </h2>
-        <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-12">
+        <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-6 sm:mb-12 px-4">
           הצצה לחווית האירוח היוקרתית שמחכה לכם
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-4">
           {["all", "interior", "outdoor", "sauna"].map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
               className={cn(
-                "px-6 py-2 rounded-full text-sm tracking-wide transition-all duration-300 border",
+                "px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm tracking-wide transition-all duration-300 border",
                 filter === cat
                   ? "bg-primary text-primary-foreground border-primary"
                   : "bg-transparent text-muted-foreground border-white/10 hover:border-primary/50 hover:text-primary"
@@ -158,7 +158,8 @@ const ImageGallery = ({ type }: ImageGalleryProps = { type: undefined }) => {
       </div>
       </Reveal>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-1 sm:gap-1">
         {filteredImages.map((image, index) => (
           <div
             key={index}
@@ -175,47 +176,48 @@ const ImageGallery = ({ type }: ImageGalleryProps = { type: undefined }) => {
             </div>
           </div>
         ))}
+        </div>
       </div>
 
       {/* Lightbox */}
       {selectedImage !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center animate-fade-in"
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center animate-fade-in overflow-hidden"
           onClick={closeLightbox}
         >
           <button
             onClick={closeLightbox}
-            className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors p-2"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white/70 hover:text-white transition-colors p-2 z-50"
           >
-            <X className="w-8 h-8" />
+            <X className="w-6 h-6 sm:w-8 sm:h-8" />
           </button>
 
           <button
             onClick={prevImage}
-            className="absolute left-4 text-white/70 hover:text-white transition-colors p-4 hover:bg-white/10 rounded-full"
+            className="absolute left-2 sm:left-4 text-white/70 hover:text-white transition-colors p-2 sm:p-4 hover:bg-white/10 rounded-full z-50"
           >
-            <ChevronLeft className="w-10 h-10" />
+            <ChevronLeft className="w-6 h-6 sm:w-10 sm:h-10" />
           </button>
 
           <div
-            className="relative max-w-7xl max-h-[90vh] w-full px-4 md:px-20"
+            className="relative max-w-full sm:max-w-7xl max-h-[90vh] w-full px-4 sm:px-6 md:px-20"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={filteredImages[selectedImage].src}
               alt={filteredImages[selectedImage].alt}
-              className="w-full h-full object-contain max-h-[85vh] rounded-sm shadow-2xl"
+              className="w-full h-full object-contain max-h-[75vh] sm:max-h-[85vh] rounded-sm shadow-2xl"
             />
-            <p className="text-center text-white/80 mt-4 text-lg font-light tracking-wide">
+            <p className="text-center text-white/80 mt-2 sm:mt-4 text-sm sm:text-lg font-light tracking-wide">
               {filteredImages[selectedImage].alt}
             </p>
           </div>
 
           <button
             onClick={nextImage}
-            className="absolute right-4 text-white/70 hover:text-white transition-colors p-4 hover:bg-white/10 rounded-full"
+            className="absolute right-2 sm:right-4 text-white/70 hover:text-white transition-colors p-2 sm:p-4 hover:bg-white/10 rounded-full z-50"
           >
-            <ChevronRight className="w-10 h-10" />
+            <ChevronRight className="w-6 h-6 sm:w-10 sm:h-10" />
           </button>
         </div>
       )}

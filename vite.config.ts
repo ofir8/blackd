@@ -4,8 +4,8 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // Base path for GitHub Pages
-  base: '/blackd/',
+  // Base path for direct server deployment (root domain)
+  base: '/',
   server: {
     host: true,
     port: 5173,

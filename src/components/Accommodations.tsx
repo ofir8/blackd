@@ -40,16 +40,16 @@ const Accommodations = () => {
   };
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 h-screen md:h-[100vh]">
+    <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen md:h-screen overflow-x-hidden">
       {/* Top Left - Suite Text */}
       <Reveal direction="fade-right" delay={0.2} width="100%">
-        <div className="bg-black text-white flex flex-col justify-center items-center p-8 md:p-12 lg:p-16 h-full w-full">
-          <div className="max-w-lg text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight">
+        <div className="bg-black text-white flex flex-col justify-center items-center p-6 sm:p-8 md:p-12 lg:p-16 min-h-[50vh] md:h-full w-full">
+          <div className="max-w-lg text-center space-y-4 sm:space-y-6 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight">
             סוויטת <span className="text-gradient">Black Diamond</span>
           </h2>
-          <div className="w-24 h-px bg-white/30 mx-auto my-6" />
-          <p className="text-base md:text-lg text-white/80 leading-relaxed font-light">
+          <div className="w-24 h-px bg-white/30 mx-auto my-4 sm:my-6" />
+          <p className="text-sm sm:text-base md:text-lg text-white/80 leading-relaxed font-light">
             סוויטה זוגית בעיצוב מהפנט, המשלבת טוויסט שיקי עם אווירה פסטורלית.
             החלל המרכזי מרווח, מואר, נעים ומזמין — כזה שלא תרצו לעזוב.
           </p>
@@ -128,13 +128,13 @@ const Accommodations = () => {
 
       {/* Bottom Right - Cabin Text */}
       <Reveal direction="fade-left" delay={0.5} width="100%">
-        <div className="bg-black text-white flex flex-col justify-center items-center p-8 md:p-12 lg:p-16 h-full w-full">
-          <div className="max-w-lg text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight">
+        <div className="bg-black text-white flex flex-col justify-center items-center p-6 sm:p-8 md:p-12 lg:p-16 min-h-[50vh] md:h-full w-full">
+          <div className="max-w-lg text-center space-y-4 sm:space-y-6 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-tight">
             הצימר – <span className="text-gradient">חמימות כפרית</span>
           </h2>
-          <div className="w-24 h-px bg-white/30 mx-auto my-6" />
-          <p className="text-base md:text-lg text-white/80 leading-relaxed font-light">
+          <div className="w-24 h-px bg-white/30 mx-auto my-4 sm:my-6" />
+          <p className="text-sm sm:text-base md:text-lg text-white/80 leading-relaxed font-light">
             מתאים לזוגות או למשפחות עד 4 אנשים. מעוצב באווירה גלילית רגועה,
             עם נגיעות מודרניות ונוחות ללא פשרות.
           </p>

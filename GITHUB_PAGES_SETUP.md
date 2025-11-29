@@ -38,3 +38,4 @@
 - בדוק את ה-logs תחת **Actions** לראות מה השגיאה
 - ודא שה-`base` ב-`vite.config.ts` תואם לשם ה-repository: `/BlackDaimond/`
 
+

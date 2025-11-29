@@ -157,18 +157,18 @@ ${formData.message || 'אין הודעה נוספת'}
 
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       <Reveal direction="fade-up" delay={0.2} width="100%">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {/* Booking Form */}
           <Card className="border border-primary/20 hover:border-primary/50 shadow-lg bg-card/80 backdrop-blur-sm hover:shadow-[0_0_30px_hsl(var(--primary)/0.2)] transition-all duration-500">
               <CardHeader>
-              <CardDescription className="text-muted-foreground text-center text-lg">
+              <CardDescription className="text-muted-foreground text-center text-sm sm:text-base md:text-lg px-2">
                 מלאו את פרטיכם ונחזור אליכם בהקדם לאשר הזמנה
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+              <CardContent className="px-4 sm:px-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                   {/* Arrival Date */}
                   <div className="space-y-2">
                     <Label>תאריך הגעה *</Label>
@@ -333,7 +333,7 @@ ${formData.message || 'אין הודעה נוספת'}
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full text-lg py-6 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--primary)/0.6)] hover:scale-105"
+                    className="w-full text-base sm:text-lg py-5 sm:py-6 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--primary)/0.6)] hover:scale-105"
                   >
                     שלח הזמנה
                   </Button>
