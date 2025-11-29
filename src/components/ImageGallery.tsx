@@ -123,7 +123,7 @@ const ImageGallery = ({ type }: ImageGalleryProps = { type: undefined }) => {
   return (
     <section id="gallery" className="section-padding bg-background relative overflow-hidden">
       <Reveal direction="fade-up" delay={0.1} width="100%">
-        <div className="container mx-auto px-4 mb-12 text-center">
+      <div className="container mx-auto px-4 mb-12 text-center">
           <h2 className="text-3xl md:text-5xl font-light mb-6">
             {type === "zimmer" ? (
               <>גלריית <span className="text-gradient">הצימר</span></>
@@ -133,9 +133,9 @@ const ImageGallery = ({ type }: ImageGalleryProps = { type: undefined }) => {
               <>גלריית <span className="text-gradient">התמונות</span></>
             )}
           </h2>
-          <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-12">
-            הצצה לחווית האירוח היוקרתית שמחכה לכם
-          </p>
+        <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-12">
+          הצצה לחווית האירוח היוקרתית שמחכה לכם
+        </p>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {["all", "interior", "outdoor", "sauna"].map((cat) => (
@@ -155,7 +155,7 @@ const ImageGallery = ({ type }: ImageGalleryProps = { type: undefined }) => {
             </button>
           ))}
         </div>
-        </div>
+      </div>
       </Reveal>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1">

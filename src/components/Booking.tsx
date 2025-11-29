@@ -162,11 +162,11 @@ ${formData.message || 'אין הודעה נוספת'}
         <div className="max-w-4xl mx-auto">
           {/* Booking Form */}
           <Card className="border border-primary/20 hover:border-primary/50 shadow-lg bg-card/80 backdrop-blur-sm hover:shadow-[0_0_30px_hsl(var(--primary)/0.2)] transition-all duration-500">
-            <CardHeader>
+              <CardHeader>
               <CardDescription className="text-muted-foreground text-center text-lg">
                 מלאו את פרטיכם ונחזור אליכם בהקדם לאשר הזמנה
-              </CardDescription>
-            </CardHeader>
+                </CardDescription>
+              </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Arrival Date */}
@@ -185,21 +185,21 @@ ${formData.message || 'אין הודעה נוספת'}
                         </Button>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar
+                <Calendar
                           mode="single"
                           selected={arrivalDate}
                           onSelect={handleArrivalDateSelect}
-                          disabled={(date) => {
-                            const today = new Date();
-                            today.setHours(0, 0, 0, 0);
-                            return date < today || isDateUnavailable(date);
-                          }}
-                          modifiers={{
-                            unavailable: unavailableDates,
-                          }}
-                          modifiersClassNames={{
-                            unavailable: "bg-red-500/50 text-white line-through",
-                          }}
+                  disabled={(date) => {
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+                    return date < today || isDateUnavailable(date);
+                  }}
+                  modifiers={{
+                    unavailable: unavailableDates,
+                  }}
+                  modifiersClassNames={{
+                    unavailable: "bg-red-500/50 text-white line-through",
+                  }}
                           initialFocus
                         />
                       </PopoverContent>
@@ -342,7 +342,7 @@ ${formData.message || 'אין הודעה נוספת'}
             </Card>
         </div>
       </Reveal>
-    </div>
+      </div>
   );
 };
 

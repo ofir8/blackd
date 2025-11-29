@@ -99,13 +99,13 @@ const Testimonials = () => {
         <Reveal direction="fade-up" delay={0.1} width="100%">
           <div className="text-center mb-16 px-6 md:px-12 lg:px-24">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight text-center text-black">
-              מה <span className="text-gradient">אורחינו</span> אומרים
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
+            מה <span className="text-gradient">אורחינו</span> אומרים
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
             <p className="text-xl md:text-2xl text-black/70 max-w-3xl mx-auto font-light leading-relaxed text-center">
-              המלצות מאורחים מרוצים שחוו את הקסם שלנו
-            </p>
-          </div>
+            המלצות מאורחים מרוצים שחוו את הקסם שלנו
+          </p>
+        </div>
         </Reveal>
 
         {/* First Row - Moving Left (Right to Left) */}
@@ -119,7 +119,7 @@ const Testimonials = () => {
               const cardId = `row1-${index}`;
               const isHovered = hoveredCard === cardId;
               return (
-              <Card
+            <Card
                 key={cardId}
                 onMouseEnter={() => setHoveredCard(cardId)}
                 onMouseLeave={() => setHoveredCard(null)}
@@ -129,15 +129,15 @@ const Testimonials = () => {
                     : 'border-black/10 bg-white'
                 }`}
                 style={{ width: '400px', minWidth: '400px' }}
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-4 flex-row-reverse">
-                    <Avatar className="w-12 h-12">
+            >
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4 mb-4 flex-row-reverse">
+                  <Avatar className="w-12 h-12">
                       <AvatarFallback className="bg-black/10 text-black font-medium">
-                        {testimonial.initials}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div className="flex-1 text-right">
+                      {testimonial.initials}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="flex-1 text-right">
                       <h4 className="font-medium text-lg text-black">{testimonial.name}</h4>
                       <p className="text-sm text-black/60">{testimonial.date}</p>
                     </div>
@@ -183,12 +183,12 @@ const Testimonials = () => {
                     <div className="flex-1 text-right">
                       <h4 className="font-medium text-lg text-black">{testimonial.name}</h4>
                       <p className="text-sm text-black/60">{testimonial.date}</p>
-                    </div>
                   </div>
-                  <div className="flex gap-1 mb-4 justify-end">{renderStars(testimonial.rating)}</div>
+                </div>
+                <div className="flex gap-1 mb-4 justify-end">{renderStars(testimonial.rating)}</div>
                   <p className="text-black/80 leading-relaxed text-right">{testimonial.comment}</p>
-                </CardContent>
-              </Card>
+              </CardContent>
+            </Card>
               );
             })}
           </div>

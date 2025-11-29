@@ -45,14 +45,14 @@ const Location = () => {
         }}>
         <Reveal direction="fade-up" delay={0.1} width="100%">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight text-center">
-              <span className="text-gradient">המיקום</span> המושלם
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight text-center">
+            <span className="text-gradient">המיקום</span> המושלם
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed text-center">
               {contactInfo.address.hebrew}
-            </p>
-          </div>
+          </p>
+        </div>
         </Reveal>
 
         <Reveal direction="fade-up" delay={0.2} width="100%">
@@ -68,7 +68,7 @@ const Location = () => {
                   <div className="flex flex-col items-center text-center group w-full max-w-[200px] overflow-visible">
                     <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-card/80 backdrop-blur-sm border border-primary/20 hover:border-primary/50 hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] transition-all duration-500 flex items-center justify-center mb-4 group-hover:scale-110 hover-lift mx-auto overflow-visible">
                       <attraction.icon className="w-10 h-10 md:w-12 md:h-12 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
+                  </div>
                     <h3 className="font-medium mb-1 group-hover:text-primary transition-colors duration-300 text-base md:text-lg">{attraction.title}</h3>
                     <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">{attraction.description}</p>
                   </div>

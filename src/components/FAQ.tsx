@@ -74,36 +74,36 @@ const FAQ = () => {
       <div className="container mx-auto relative z-10">
         <Reveal direction="fade-up" delay={0.1} width="100%">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight text-center">
-              שאלות <span className="text-gradient">נפוצות</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight text-center">
+            שאלות <span className="text-gradient">נפוצות</span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed text-center">
-              כל התשובות לשאלות הנפוצות ביותר
-            </p>
-          </div>
+            כל התשובות לשאלות הנפוצות ביותר
+          </p>
+        </div>
         </Reveal>
 
         <Reveal direction="fade-up" delay={0.2} width="100%">
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
+        <div className="max-w-4xl mx-auto">
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
                 <Reveal key={index} direction="fade-up" delay={0.3 + index * 0.05} duration={0.5} width="100%">
-                  <AccordionItem
-                    value={`item-${index}`}
+              <AccordionItem
+                value={`item-${index}`}
                     className="group bg-card/80 backdrop-blur-sm border border-primary/20 hover:border-primary/50 rounded-lg px-6 hover:shadow-[0_0_30px_hsl(var(--primary)/0.2)] transition-all duration-500 hover-lift w-full data-[state=open]:bg-white data-[state=open]:border-black/20 data-[state=open]:shadow-lg"
-                  >
+              >
                     <AccordionTrigger className="text-right font-medium text-lg py-6 hover:no-underline group-hover:text-primary transition-colors duration-300 w-full data-[state=open]:text-black">
-                      {faq.question}
-                    </AccordionTrigger>
+                  {faq.question}
+                </AccordionTrigger>
                     <AccordionContent className="text-right text-muted-foreground leading-relaxed pb-6 group-hover:text-foreground/80 transition-colors duration-300 data-[state=open]:text-black data-[state=open]:font-medium">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
                 </Reveal>
-              ))}
-            </Accordion>
-          </div>
+            ))}
+          </Accordion>
+        </div>
         </Reveal>
       </div>
     </section>

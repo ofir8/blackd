@@ -52,11 +52,11 @@ const Amenities = () => {
       <div className="container mx-auto relative z-10">
         <Reveal direction="fade-up" delay={0.1} width="100%">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight text-center">
               <span className="text-gradient">כל מה שצריך לחוויה מושלמת</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
-          </div>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
+        </div>
         </Reveal>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -64,20 +64,20 @@ const Amenities = () => {
             <Reveal key={index} direction="fade-up" delay={0.2 + index * 0.1} duration={0.6} width="100%">
               <div className="group p-8 lg:p-10 rounded-2xl bg-card/80 backdrop-blur-sm border border-primary/20 hover:border-primary/50 hover:shadow-[0_0_40px_hsl(var(--primary)/0.3)] transition-all duration-500 hover-lift h-full flex flex-col">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mb-6 group-hover:from-primary/30 group-hover:to-primary/20 group-hover:scale-110 transition-all duration-300 mx-auto">
-                  <amenity.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <h3 className="text-2xl font-light mb-6 group-hover:text-primary transition-colors duration-300 text-center">
-                  {amenity.title}
-                </h3>
-                <ul className="space-y-3 flex-1">
-                  {amenity.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 text-right">
-                      <span className="text-primary mt-1 flex-shrink-0 group-hover:scale-125 transition-transform duration-300">✓</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <amenity.icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
               </div>
+                <h3 className="text-2xl font-light mb-6 group-hover:text-primary transition-colors duration-300 text-center">
+                {amenity.title}
+              </h3>
+                <ul className="space-y-3 flex-1">
+                {amenity.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 text-right">
+                    <span className="text-primary mt-1 flex-shrink-0 group-hover:scale-125 transition-transform duration-300">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             </Reveal>
           ))}
         </div>
@@ -93,13 +93,13 @@ const Amenities = () => {
           <div className="relative z-10 text-center">
             <h3 className="text-3xl font-light mb-6 text-black">
               <span className="text-black">מארחים שמרגישים</span>
-            </h3>
+          </h3>
             <p className="text-lg text-black/80 max-w-3xl mx-auto leading-relaxed">
-              אופיר ובינת, המתגוררים בקדמת המתחם, מעניקים אירוח בגישה אחרת – שלווה, מכבדת, 
-              קשובה ונעימה. אופיר בנה את המקום בידיו והאיכות מורגשת בכל פינה: מפרטי העץ 
-              ועד התאורה, מהסאונה ועד הבריכה.
-            </p>
-          </div>
+            אופיר ובינת, המתגוררים בקדמת המתחם, מעניקים אירוח בגישה אחרת – שלווה, מכבדת, 
+            קשובה ונעימה. אופיר בנה את המקום בידיו והאיכות מורגשת בכל פינה: מפרטי העץ 
+            ועד התאורה, מהסאונה ועד הבריכה.
+          </p>
+        </div>
           </div>
         </Reveal>
 
@@ -109,9 +109,9 @@ const Amenities = () => {
           <div className="text-center">
             <h3 className="text-2xl font-light mb-4 text-black">אירוח מותאם לשומרי מסורת</h3>
             <p className="text-black/80 leading-relaxed max-w-2xl mx-auto">
-              המתחם כולל פלטת שבת, מיחם, כלים חד-פעמיים, מעמד לנרות, ובית כנסת במרחק הליכה.
-            </p>
-          </div>
+                המתחם כולל פלטת שבת, מיחם, כלים חד-פעמיים, מעמד לנרות, ובית כנסת במרחק הליכה.
+              </p>
+            </div>
           </div>
         </Reveal>
       </div>

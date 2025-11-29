@@ -104,7 +104,7 @@ const Hero = () => {
           alt="Black Diamond Logo"
           className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain"
         />
-      </div>
+          </div>
 
       {/* Shape Logo Overlay - Full screen cover with soft blend mode for luxury effect */}
       <div className="absolute inset-0 z-[4] pointer-events-none overflow-hidden">
@@ -112,7 +112,7 @@ const Hero = () => {
           src={shapeLogo}
           alt="Black Diamond Shape Logo"
           className="w-full h-full object-cover opacity-5 transition-transform duration-300 ease-out"
-          style={{
+              style={{
             mixBlendMode: 'overlay',
             objectFit: 'contain',
             transform: `scale(${scale})`,

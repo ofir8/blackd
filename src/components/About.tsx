@@ -91,13 +91,13 @@ const About = () => {
         {/* Right Side - White Background with Content (50%) */}
         <div className="bg-white text-black flex flex-col justify-center items-center p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 relative z-10 overflow-hidden lg:h-screen py-12 lg:py-0 w-full" style={{ boxShadow: '-2px 0 8px rgba(0, 0, 0, 0.08)' }}>
           {/* White background slides in from right */}
-          <div 
+      <div
             className={`absolute inset-0 bg-white transform transition-all duration-1000 ease-out ${
               isVisible 
                 ? 'translate-x-0' 
                 : 'translate-x-full'
             }`}
-            style={{
+        style={{
               transitionTimingFunction: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
             }}
           />
@@ -171,7 +171,7 @@ const About = () => {
           <div className="relative lg:h-full flex items-center justify-center p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 w-full" style={{ overflow: 'visible' }}>
             <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl aspect-square" style={{ overflow: 'visible' }}>
               {/* Images with fade transition - Enhanced clarity */}
-              {features.map((feature, index) => (
+            {features.map((feature, index) => (
                 <div
                   key={index}
                   className={`absolute inset-0 transition-opacity duration-1000 ${
@@ -203,7 +203,7 @@ const About = () => {
                     aria-label={`תמונה ${index + 1}`}
                   />
                 ))}
-              </div>
+                </div>
 
               {/* Circular Logo with Rotating Text - Top center on mobile, bottom left on desktop */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:!top-auto lg:!bottom-0 lg:!left-0 lg:!translate-x-[-50%] lg:!translate-y-[50%] z-30" style={{ pointerEvents: 'none' }}>
@@ -259,7 +259,7 @@ const About = () => {
                           alt="Black Diamond Logo"
                           className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-contain"
                         />
-                      </div>
+                  </div>
                     </foreignObject>
                   </svg>
                 </div>
