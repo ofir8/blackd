@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Black Diamond - פסגת האירוח בגליל המערבי</title>
     <script>
-      // Redirect to index.html for SPA routing (works for both Vercel and GitHub Pages)
+      // Redirect to index.html for SPA routing on GitHub Pages
       var path = window.location.pathname;
       var search = window.location.search;
       var hash = window.location.hash;
+      var base = '/blackd/';
       
-      // Redirect to index.html with the original path as query parameter
-      if (path !== '/' && path !== '/index.html') {
-        window.location.replace('/index.html' + search + hash);
+      // Remove base path if present
+      if (path.startsWith(base)) {
+        path = path.slice(base.length - 1);
+      }
+      
+      // Redirect to index.html with the original path
+      if (path !== '/' && path !== '/index.html' && !path.startsWith('/blackd/')) {
+        window.location.replace(base + 'index.html' + search + hash);
       } else {
-        window.location.replace('/index.html' + search + hash);
+        window.location.replace(base + 'index.html' + search + hash);
       }
     </script>
   </head>
