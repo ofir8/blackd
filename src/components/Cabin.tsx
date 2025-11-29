@@ -1,6 +1,6 @@
 import { Users, Coffee, Tv, Droplet } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import cabinImage from "@/assets/cabin-exterior.jpg";
+import cabinImage from "@/assets/DSC05631.jpg";
 
 const Cabin = () => {
   const features = [
@@ -27,31 +27,47 @@ const Cabin = () => {
   ];
 
   return (
-    <section id="cabin" className="section-padding bg-muted/30">
-      <div className="container mx-auto">
+    <section id="cabin" className="section-padding bg-black relative overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: `url(${cabinImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-black" />
+
+      <div className="container mx-auto relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 tracking-tight text-center">
             הצימר – <span className="text-gradient">חמימות כפרית</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-8" />
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed text-center">
             באיכות גבוהה ונוחות ללא פשרות
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative overflow-hidden rounded-2xl group hover-lift">
+          <div className="relative overflow-hidden rounded-2xl group hover-lift border-2 border-primary/20 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_40px_hsl(var(--primary)/0.4)]">
             <img
               src={cabinImage}
               alt="Cozy Cabin with Hot Tub"
               className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <p className="text-white text-lg font-medium">הצימר הכפרי החמים</p>
+              <p className="text-white/80 text-sm">ג'קוזי ספא במתחם פרטי</p>
+            </div>
           </div>
 
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              מתאים לזוגות או למשפחות עד 4 אנשים. מעוצב באווירה גלילית רגועה, 
+              מתאים לזוגות או למשפחות עד 4 אנשים. מעוצב באווירה גלילית רגועה,
               עם נגיעות מודרניות ונוחות ללא פשרות.
             </p>
 

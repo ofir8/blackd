@@ -5,9 +5,13 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // GitHub Pages base path - matches repository name
+  base: '/BlackDaimond/',
   server: {
-    host: "::",
-    port: 8080,
+    host: true,
+    port: 5173,
+    strictPort: false,
+    open: true,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
