@@ -18,13 +18,20 @@
         var path = window.location.pathname;
         var search = window.location.search;
         var hash = window.location.hash;
-        var pathIsIndex = path === '/' || path === '/index.html';
+        var base = '/BlackDaimond/';
+        
+        // Remove base path from pathname
+        if (path.startsWith(base)) {
+          path = path.slice(base.length - 1);
+        }
+        
+        var pathIsIndex = path === '/' || path === '/index.html' || path === base || path === base + 'index.html';
         var hasQueryString = search !== '';
         var hasHash = hash !== '';
         
         // If path is not index and there's no query string or hash, redirect
         if (!pathIsIndex && !hasQueryString && !hasHash) {
-          var newPath = '/?' + path.slice(1);
+          var newPath = base + '?/' + path.slice(1);
           if (search) {
             newPath += search.replace(/&/g, '~and~');
           }
@@ -34,7 +41,7 @@
           window.location.replace(newPath);
         } else {
           // Otherwise, redirect to index.html
-          window.location.replace('/index.html' + search + hash);
+          window.location.replace(base + 'index.html' + search + hash);
         }
       })();
     </script>
